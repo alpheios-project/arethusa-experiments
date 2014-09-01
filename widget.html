@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="http://85.127.247.18:8081/dist/arethusa.min.css">
+  <link rel="stylesheet" href="http://85.127.247.18:8081/vendor/foundation-icons/foundation-icons.css">
+  <link rel="stylesheet" href="http://85.127.247.18:8081/vendor/font-awesome-4.1.0/css/font-awesome.min.css">
+
+  <script src="http://85.127.247.18:8081/dist/arethusa_packages.min.js"></script>
+  <script src="http://85.127.247.18:8081/dist/arethusa.min.js"></script>
+
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <div class="row panel">
+    <p class="bold">
+      This is NOT an Arethusa webpage - merely integrating it as a widget!
+    </p>
+
+    <br/><br/>
+
+    <div id="arethusa-tree1" style="height: 500px; width: 600px">
+      <plugin name="depTree"></plugin>
+    </div>
+
+    <br/><br/>
+
+    <p class="bold">
+      This is outside of Arethusa and its Angular code as well.
+    </p>
+
+    <br/><br/>
+
+    <div id="arethusa-text1" style="width: 50%">
+      <div>
+        <span class="right clickable" ng-click="optionsOn = !optionsOn">
+          <i class="fi-widget"></i>
+        </span>
+        <div ng-show="optionsOn" colorizer-setting></div>
+      </span>
+
+      <plugin name="text"></plugin>
+      <plugin name="morph"></plugin>
+    </div>
+  </div>
+  <script>
+    var basePath = 'http://85.127.247.18:8081';
+    var params1 = { doc: 1 };
+    var params2 = { doc: 2 };
+
+    arethusa.setBasePath(basePath);
+
+    $.get('./conf.json', function(conf) {
+      arethusa.start('arethusa-tree1', conf, params1, basePath);
+    });
+
+    //$.get('./conf2.json', function(conf) {
+    //  arethusa.start('arethusa-text1', conf, params2, basePath);
+    //});
+  </script>
+</body>
+</html>

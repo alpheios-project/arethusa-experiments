@@ -1,0 +1,7 @@
+<div
+  ng-repeat="(id, _) in state.selectedTokens"
+  ng-init="form = state.getToken(id).morphology">
+  <div ng-style="plugin.styleOf(form)">
+    {{ plugin.concatenatedAttributes(form) }}
+  </div>
+</div>
