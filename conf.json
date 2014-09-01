@@ -63,7 +63,6 @@
   },
   "plugins": {
     "depTree": {
-      "name": "depTree",
       "main": true,
       "contextMenu": true,
       "contextMenuTemplate": "templates/arethusa.dep_tree/context_menu.html",
@@ -523,7 +522,6 @@
       }
     },
     "relation": {
-      "name": "relation",
       "template": "templates/relation.html",
       "advancedMode": true,
       "contextMenu": true,
@@ -705,9 +703,6 @@
           }
         }
       }
-    },
-    "artificialToken": {
-      "name": "aT"
     }
   }
 }

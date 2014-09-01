@@ -63,7 +63,6 @@
   },
   "plugins": {
     "text" : {
-      "name" : "text",
       "template" : "templates/text2.html"
     },
     "morph": {
@@ -520,7 +519,6 @@
       }
     },
     "relation": {
-      "name": "relation",
       "template": "templates/relation.html",
       "advancedMode": true,
       "contextMenu": true,
@@ -702,9 +700,6 @@
           }
         }
       }
-    },
-    "artificialToken": {
-      "name": "aT"
     }
   }
 }
